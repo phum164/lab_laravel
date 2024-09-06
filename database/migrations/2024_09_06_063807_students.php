@@ -13,7 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        
+        Schema::create('students', function (Blueprint $table) {
+            $table->id();
+            $table->string('stu_name', 255);
+            $table->integer('age');
+            $table->string('grade', 255);
+            $table->timestamps();
+            $table->softDeletes();
+        });
     }
 
     /**

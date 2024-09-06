@@ -1,11 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-/* styles.css */
 
-/* สไตล์สำหรับ Navigation */
 nav {
-    background-color: #f8f9fa;
+    background-color: #000000;
     padding: 15px;
 }
 
@@ -33,7 +28,6 @@ nav ul li a:hover {
     background-color: #0056b3;
 }
 
-/* สไตล์สำหรับ Form */
 form {
     margin-top: 20px;
 }
@@ -68,7 +62,6 @@ input[type="submit"]:hover {
     background-color: #218838;
 }
 
-/* สไตล์สำหรับ Table */
 table {
     width: 100%;
     border-collapse: collapse;
