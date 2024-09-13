@@ -58,6 +58,12 @@
                 <td>{{ $item->stu_name }}</td>
                 <td>{{ $item->age }}</td>
                 <td>{{ $item->grade }}</td>
+                <td>
+                    <button onclick="if(confirm('คุณต้องการลบ {{ $item->stu_name }} หรือไม่ ?')) 
+                    { window.location.href='{{ route('delete', $item->id) }}'; }">
+                    delete
+                    </button>
+                </td>
             </tr>
         @endforeach
     </table>

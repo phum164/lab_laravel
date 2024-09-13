@@ -24,6 +24,7 @@ Route::get('movie',[MovieController::class,'index']);
 Route::get('show',[FacultyController::class,'index']);
 Route::get('/students',[studentController::class,'index']);
 Route::post('/students/insert',[studentController::class,'insert']);
+Route::get('delete/{id}',[studentController::class, 'destroy'])->name('delete');
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
