@@ -10,4 +10,9 @@ class Student extends Model
 {
     use HasFactory;
     use SoftDeletes;
+    protected $fillable = [
+        'stu_name',
+        'age',
+        'grade',
+    ];
 }

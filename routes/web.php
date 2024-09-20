@@ -25,6 +25,8 @@ Route::get('show',[FacultyController::class,'index']);
 Route::get('/students',[studentController::class,'index']);
 Route::post('/students/insert',[studentController::class,'insert']);
 Route::get('delete/{id}',[studentController::class, 'destroy'])->name('delete');
+Route::get('/students/{id}', [studentController::class, 'edit'])->name('showedit');
+Route::post('/studnet/update', [studentController::class, 'update'])->name('edit');
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),

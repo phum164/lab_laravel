@@ -51,7 +51,7 @@ form input, form select {
     border-radius: 4px;
 }
 
-input[type="submit"] {
+input[id="submit"] {
     background-color: #28a745;
     color: white;
     padding: 10px 15px;
@@ -60,7 +60,7 @@ input[type="submit"] {
     cursor: pointer;
 }
 
-input[type="submit"]:hover {
+input[id="submit"]:hover {
     background-color: #218838;
 }
 

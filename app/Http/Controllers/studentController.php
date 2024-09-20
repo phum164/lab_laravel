@@ -19,13 +19,6 @@ class studentController extends Controller
     }
 
     function insert(Request $request){
-        // $time = date('Y-m-d H:i:s',time());
-        // $data=[
-        //     'stu_name'=>$request->name,
-        //     'age'=>$request->age,
-        //     'grade'=>$request->grade
-        // ];
-        // DB::table('students')->insert($data);
         $student = new Student();
         $student->stu_name = $request->name;
         $student->age = $request->age;
@@ -74,7 +67,9 @@ class studentController extends Controller
      */
     public function edit($id)
     {
-        //
+        $students = Student::all();
+        $edit = Student::find($id);
+        return view('student',compact('edit','students'));
     }
 
     /**
@@ -84,9 +79,15 @@ class studentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        $data=[
+            'stu_name'=>$request->name,
+            'age'=>$request->age,
+            'grade'=>$request->grade,
+        ];
+        Student::find($request->id)->update($data);
+        return redirect('/students');
     }
 
     /**
